@@ -1,0 +1,278 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #1D2228; /* Dark background */
+    color: #E1E2E2; /* Light text color */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.container img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+
+    
+}
+
+/* Header */
+header {
+    background: #1D2228; /* Dark background */
+    color: #E1E2E2; /* Light text color */
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    margin-right: 430px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #FB8122; /* Vibrant orange */
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li {
+    display: inline;
+}
+
+header nav ul li a {
+    color: #E1E2E2; /* Light text color */
+    text-decoration: none;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #FB8122; /* Vibrant orange */
+    border-bottom: 2px solid #FB8122; /* Adds underline on hover */
+}
+
+header .cta {
+    background: #FB8122; /* Vibrant orange */
+    color: #1D2228; /* Dark text color */
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-left: auto;
+} /* Ensures it aligns to the right */
+
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+header .logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #FB8122; /* Vibrant orange */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Arial', sans-serif; /* Add a sleek, clean font */
+    text-shadow: 2px 2px #1D2228; /* Subtle shadow for depth */
+}
+
+header nav ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li a {
+    font-size: 16px;
+    color: #E1E2E2; /* Light text color */
+    text-decoration: none;
+    transition: color 0.3s, transform 0.3s;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Profile Icon Styles */
+.profile-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #FB8122; /* Default color */
+    color: #1D2228; /* Text color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-left: 10px; /* Space from the navigation */
+    margin-right: -30px;
+    cursor: pointer;
+  }
+  
+  .profile-icon.hidden {
+    display: none; /* Hide when no user is logged in */
+  }
+  
+
+
+/* Hero Section */
+.hero {
+    background: url('hero-image.jpg') no-repeat center center/cover;
+    color: #E1E2E2; /* Light text color */
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin: 0 0 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin: 0 0 50px; /* Increased the space between the paragraph and the button */
+}
+
+.hero .btn {
+    background: #FB8122; /* Vibrant orange */
+    color: #1D2228; /* Dark text color */
+    padding: 10px 20px;
+    text-decoration: none;
+    margin-top: 0; /* No extra margin at the top of the button */
+    border-radius: 5px;
+}
+
+/* Features Section */
+.features {
+    padding: 50px 20px;
+    background: #1D2228; /* Dark background */
+}
+
+.features h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #FB8122; /* Vibrant orange */
+}
+
+.feature-list {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.feature {
+    flex: 1;
+    min-width: 250px;
+    padding: 20px;
+    background: #E1E2E2; /* Light background */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    color: #1D2228; /* Dark text color */
+}
+
+/* Courses Section */
+.courses {
+    padding: 50px 20px;
+    background: #1D2228; /* Dark background */
+}
+
+.courses h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #FB8122; /* Vibrant orange */
+}
+
+.course-list {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.course {
+    flex: 1;
+    min-width: 250px;
+    padding: 20px;
+    background: #E1E2E2; /* Light background */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    color: #1D2228; /* Dark text color */
+}
+
+.course .btn {
+    display: inline-block;
+    margin-top: 10px;
+    background: #FB8122; /* Vibrant orange */
+    color: #1D2228; /* Dark text color */
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 50px 20px;
+    background: #1D2228; /* Dark background */
+}
+
+.testimonials h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #FB8122; /* Vibrant orange */
+}
+
+blockquote {
+    margin: 20px auto;
+    max-width: 600px;
+    font-style: italic;
+    text-align: center;
+    color: #E1E2E2; /* Light text color */
+}
+
+blockquote cite {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #FB8122; /* Vibrant orange */
+}
+
+/* Footer */
+footer {
+    background: #1D2228; /* Dark background */
+    color: #E1E2E2; /* Light text color */
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+footer nav ul li a {
+    color: #FB8122; /* Vibrant orange */
+    text-decoration: none;
+}
+

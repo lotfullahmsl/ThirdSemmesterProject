@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up - Page</title>
+    <link rel="stylesheet" href="signup.css" />
+  </head>
+  <body>
+    <div class="signup-container">
+      <h2>Create Your Account</h2>
+      <p>Please fill in the details to create an account</p>
+      <form
+        action="http://localhost:3000/signup"
+        method="POST"
+        id="signup-form"
+      >
+        <!-- Message Box -->
+        <div id="message-box" style="color: red; margin-top: 10px"></div>
+
+        <!-- Username Field -->
+        <div class="form-group">
+          <label for="username">Username</label>
+          <div class="input-container">
+            <img src="user name.png" alt="Username Icon" class="input-icon" />
+            <input
+              type="text"
+              id="username"
+              name="username"
+              placeholder="Enter your username"
+              required
+            />
+          </div>
+        </div>
+
+        <!-- Email Field -->
+        <div class="form-group">
+          <label for="email">Email</label>
+          <div class="input-container">
+            <img src="mail.png" alt="Email Icon" class="input-icon" />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+        </div>
+
+        <!-- Password Field -->
+        <div class="form-group">
+          <label for="password">Password</label>
+          <div class="input-container">
+            <img
+              src="password icon.png"
+              alt="Password Icon"
+              class="input-icon"
+            />
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Enter your password"
+              required
+            />
+          </div>
+          <div id="password-strength">
+            <div id="strength-bar"></div>
+            <span id="strength-text"></span>
+          </div>
+        </div>
+
+        <button type="submit">Sign Up</button>
+        <div class="extra-options">
+          <a href="login.html">Already have an account?</a>
+        </div>
+      </form>
+    </div>
+
+    <script src="signup.js"></script>
+  </body>
+</html>
