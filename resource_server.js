@@ -1,9 +1,12 @@
 const express = require('express');
 const mysql = require('mysql'); 
+const cors = require('cors');  // Add cors import here
 const app = express();
 
-
 const port = 3002;
+
+// Enable CORS for all routes
+app.use(cors()); // Add this middleware here
 
 // Set up MySQL connection
 const connection = mysql.createConnection({
@@ -54,15 +57,15 @@ app.post('/insert-topics', async (req, res) => {
     }
 });
 
-// Endpoint to fetch topics for the dropdown
 app.get('/get-topics', (req, res) => {
     const query = 'SELECT * FROM topics';
-    
     connection.query(query, (err, results) => {
         if (err) {
+            console.error('Error fetching topics:', err);
             return res.status(500).send('Error fetching topics');
         }
-        res.json(results); // Return the topics as JSON
+        console.log('Fetched topics:', results);  // Log the result to confirm data is fetched
+        res.json(results);
     });
 });
 

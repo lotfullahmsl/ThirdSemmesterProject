@@ -29,19 +29,18 @@
     <!-- Main Content -->
     <main>
       <!-- Topic Selection Section -->
-
       <section class="topic-selection">
         <h2>Select a Topic</h2>
         <select id="topic-dropdown">
           <option value="" style="color: gray">Choose a Topic</option>
-          <option value="web-development">Web Development</option>
-          <option value="dsa">Data Structures and Algorithms</option>
-          <option value="mobile-development">Mobile Development</option>
+          <!-- Dropdown options will be populated dynamically from the database -->
         </select>
         <button id="load-articles">Load Articles</button>
         <!-- loading should display in next line -->
+        <div id="loading" style="display: none; margin-top: 10px">
+          Loading...
+        </div>
       </section>
-      <div id="loading" style="display: none">Loading...</div>
 
       <!-- Most Rated Articles -->
       <section class="suggestion-section">
@@ -80,7 +79,6 @@
     <footer>
       <p>&copy; 2024 Smart Study. All rights reserved.</p>
     </footer>
-
     <script src="resource_detail.js"></script>
   </body>
 </html>
