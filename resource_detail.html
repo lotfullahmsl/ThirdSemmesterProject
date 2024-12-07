@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Study</title>
+    <link rel="stylesheet" href="resource_detail.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container">
+        <img
+          src="local_library_48dp_FB8122_FILL0_wght400_GRAD0_opsz48.svg"
+          alt="Logo"
+        />
+        <div class="logo">Smart Study</div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#resources">Resources</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Topic Selection Section -->
+
+      <section class="topic-selection">
+        <h2>Select a Topic</h2>
+        <select id="topic-dropdown">
+          <option value="" style="color: gray">Choose a Topic</option>
+          <option value="web-development">Web Development</option>
+          <option value="dsa">Data Structures and Algorithms</option>
+          <option value="mobile-development">Mobile Development</option>
+        </select>
+        <button id="load-articles">Load Articles</button>
+        <!-- loading should display in next line -->
+      </section>
+      <div id="loading" style="display: none">Loading...</div>
+
+      <!-- Most Rated Articles -->
+      <section class="suggestion-section">
+        <h3>Most Rated Articles</h3>
+        <ul id="most-rated" disabled>
+          <!-- Dynamically loaded most-rated articles will appear here -->
+        </ul>
+      </section>
+
+      <!-- Article List Section -->
+      <section class="article-list">
+        <h2>Available Articles</h2>
+        <ul id="article-titles">
+          <!-- Dynamically loaded articles will appear here -->
+        </ul>
+      </section>
+
+      <!-- Article Details Section -->
+      <section class="article-details">
+        <h2>Article Details</h2>
+        <div id="article-content">
+          <p>Select an article to view its details here.</p>
+        </div>
+        <div id="article-feedback">
+          <h3>Feedback</h3>
+          <textarea
+            id="feedback-input"
+            placeholder="Leave your feedback here..."
+          ></textarea>
+          <button id="submit-feedback">Submit Feedback</button>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2024 Smart Study. All rights reserved.</p>
+    </footer>
+
+    <script src="resource_detail.js"></script>
+  </body>
+</html>

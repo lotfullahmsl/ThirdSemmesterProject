@@ -1,0 +1,280 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+    --primary-color: #1D2228; /* Dark background */
+    --secondary-color: #E1E2E2; /* Light gray color */
+    --highlight-color: #FB8122; /* Orange highlight */
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+/* Header Styling */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.container img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+
+    
+}
+
+/* Header */
+header {
+    background: #1D2228; /* Dark background */
+    color: #E1E2E2; /* Light text color */
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    margin-right: 430px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #FB8122; /* Vibrant orange */
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li {
+    display: inline;
+}
+
+header nav ul li a {
+    color: #E1E2E2; /* Light text color */
+    text-decoration: none;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #FB8122; /* Vibrant orange */
+    border-bottom: 2px solid #FB8122; /* Adds underline on hover */
+}
+
+header .cta {
+    background: #FB8122; /* Vibrant orange */
+    color: #1D2228; /* Dark text color */
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-left: auto;
+} /* Ensures it aligns to the right */
+
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+header .logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #FB8122; /* Vibrant orange */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Arial', sans-serif; /* Add a sleek, clean font */
+    text-shadow: 2px 2px #1D2228; /* Subtle shadow for depth */
+}
+
+header nav ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li a {
+    font-size: 16px;
+    color: #E1E2E2; /* Light text color */
+    text-decoration: none;
+    transition: color 0.3s, transform 0.3s;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+/* Main Content */
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Topic Selection */
+.topic-selection {
+    /* background-color: var(--highlight-color); */
+    color: var(--primary-color);
+    background-color: #E1E2E2;  /* Gray background for the container */
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.topic-selection h2 {
+    margin-bottom: 1rem;
+}
+
+
+.topic-selection h2 {
+    margin-bottom: 1rem;
+}
+#loading {
+    display: flex;
+    margin-top: 10px;  /* Adds spacing above the spinner */
+    text-align: center;  /* Centers the spinner in the container */
+    justify-content: center;
+    font-size: 18px;
+    color: var(--highlight-color);  /* Use your highlight color for the spinner */
+}
+
+#loading:after {
+    content: '⏳';
+    animation: spin 1.5s infinite linear;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+#topic-dropdown {
+    padding: 0.5rem;
+    font-size: 1rem;
+    width: 100%;
+    margin-bottom: 1rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    color: var(--primary-color);
+    background-color: var(--secondary-color); /* Gray background */
+}
+
+#load-articles {
+    background-color: var(--highlight-color);
+    color: var(--primary-color);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* #load-articles:hover {
+    background-color: var(--highlight-color);
+} */
+
+/* Most Rated Articles */
+.suggestion-section {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+#most-rated {
+    list-style: none;
+    padding: 0;
+}
+
+#most-rated li {
+    padding: 0.5rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+    background-color: var(--highlight-color);
+    color: var(--primary-color);
+}
+
+/* Article List */
+.article-list {
+    margin-bottom: 2rem;
+}
+
+.article-list h2 {
+    margin-bottom: 1rem;
+}
+
+#article-titles {
+    list-style: none;
+    padding: 0;
+}
+
+#article-titles li {
+    padding: 0.5rem;
+    border: 1px solid var(--secondary-color);
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+/* Article Details Section */
+.article-details h2 {
+    margin-bottom: 1rem;
+}
+
+#article-content {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+}
+
+/* Feedback Box */
+#feedback-input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    color: var(--primary-color);
+}
+
+/* Submit Button */
+#submit-feedback {
+    background-color: var(--highlight-color);
+    color: var(--primary-color);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    /* border-top: 1px solid var(--highlight-color); */
+    color: var(--secondary-color);
+    margin-top: 2rem;
+}
